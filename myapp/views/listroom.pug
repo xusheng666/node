@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  style(type="text/css").
+    table {
+      width: 100%;
+    }
+  table 
+    thead
+      
+      tr: th MRT
+          th Title
+          th URL
+    tbody
+      each room in roomlist
+        tr
+          td #{room.mrt}
+          td #{room.title} 
+          td #[a(href=room.url) Link]
